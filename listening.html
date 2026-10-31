@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog — PAZZO PROD</title>
+</head>
+<body>
+
+  <h1>PAZZO PROD</h1>
+
+  <h2>Now listening to...</h2>
+
+  <p>
+    <input type="text" id="search" placeholder="search tags in lowercase">
+  </p>
+
+  <article>
+    <h3>Another post</h3>
+    <p><time datetime="2026-10-31">31 October 2026</time></p>
+    <p>
+      Write another post here.
+    </p>
+  <hr>
+  </article>
+
+  <article>
+    <h3>Igor's Party by Tony and the Monstrosities (1960)</h3>
+    <p><time datetime="2026-10-30">30 October 2026</time></p>
+    <p>
+      Some of the best music is halloween music... but the worst time to listen to it is on halloween. A bit banal, isn't it?
+    </p>
+    <p>Tags: garage, 1960s, rockin', party, tony and the monstrosities</p>
+  <hr>
+  </article>
+
+  <article>
+    <h3>Iced-Off Broccoli by Sun City Girls (2012)</h3>
+    <p><time datetime="2026-10-30">30 October 2026</time></p>
+    <p>
+      Short and sweet sun city girls.
+    </p>
+    <p>Tags: weird, american, guitar, short, thinking, sun city girls</p>
+  <hr>
+  </article>
+
+
+ <article>
+    <h3>Less Playboy, More Cowboy</h3>
+    <p><time datetime="2026-10-30">30 October 2026</time></p>
+    <p>
+      Couldn't have said it better myself.
+    </p>
+    <p>Tags: psychobilly, russian, twangy, cowboy, messer chups</p>
+  <hr>
+  </article>
+
+ <article>
+    <h3>Back to Nature by Fad Gadget (1986) </h3>
+    <p><time datetime="2026-10-30"> October 2026</time></p>
+    <p>
+      Couldn't have said it better myself.
+    </p>
+    <p>Tags: nature, early genre, industrial, english, fad gadget</p>
+  <hr>
+  </article>
+
+  <script>
+    const searchBox = document.getElementById("search");
+    const posts = document.querySelectorAll("article");
+
+    searchBox.addEventListener("input", function () {
+      const text = searchBox.value.toLowerCase();
+
+      posts.forEach(function (post) {
+        const content = post.textContent.toLowerCase();
+
+        if (content.includes(text)) {
+          post.style.display = "block";
+        } else {
+          post.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
