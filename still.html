@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>STILL — PAZZO PROD</title>
+  <title>STILL MEDIUMS — PAZZO PROD</title>
   <link rel="icon" href="favicon.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Goblin+One&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -18,8 +18,9 @@
       margin: 0;
       padding: 25px 20px;
       text-align: center;
-      background: white;
+      font-family: "Times New Roman", Times, serif;
       color: black;
+      background: white;
     }
 
     .page {
@@ -28,47 +29,57 @@
       margin: 0 auto;
     }
 
-    h1 {
-      font-family: "Ultra", serif;
+    .site-title {
+      font-family: "Goblin One", serif;
+      font-size: clamp(1.2rem, 3vw, 2rem);
       font-weight: 400;
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
-      line-height: 1.1;
+      line-height: 1.3;
       margin: 0 0 20px;
     }
 
-    .home-link {
-      color: inherit;
+    .site-title a {
+      color: black;
       text-decoration: none;
     }
 
     nav {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 8px;
-      margin-bottom: 15px;
     }
 
-    .nav-box {
+    .nav-button {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 8px 16px;
+      border: 2px solid black;
+      border-radius: 0;
       background: black;
       color: white;
       text-decoration: none;
-      font-family: Georgia, serif;
-      font-size: 13px;
-      font-weight: bold;
+      font-family: "Anton", sans-serif;
+      font-size: 17px;
+      line-height: 1.2;
     }
 
-    .nav-box:hover,
-    .nav-box:focus-visible,
-    .nav-box[aria-current="page"] {
+    .nav-button:hover,
+    .nav-button:focus-visible,
+    .nav-button[aria-current="page"] {
       background: #b32025;
+      border-color: #b32025;
     }
 
-    .nav-box:focus-visible {
+    a {
+      color: black;
+    }
+
+    a:focus-visible {
       outline: 2px solid black;
-      outline-offset: 3px;
+      outline-offset: 4px;
+    }
+
+    .home-link {
+      margin: 15px 0 20px;
     }
 
     hr {
@@ -77,14 +88,34 @@
       margin: 20px 0;
     }
 
-    a {
-      color: black;
+    main {
+      max-width: 750px;
+      margin: 45px auto;
     }
 
-    .still-content {
-      margin: 40px auto;
-      font-family: Georgia, serif;
-      line-height: 1.6;
+    h1 {
+      font-family: "Goblin One", serif;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.3;
+      margin: 0 0 25px;
+    }
+
+    .extra-links {
+      margin-top: 30px;
+    }
+
+    .extra-links a {
+      display: inline-block;
+      border: 2px solid black;
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover,
+    .extra-links a:focus-visible {
+      background: black;
+      color: white;
     }
 
     footer {
@@ -97,37 +128,48 @@
   <div class="page">
 
     <header>
-      <h1>
-        <a href="index.html" class="home-link">PAZZO PRODUCTIONS</a>
-      </h1>
+      <p class="site-title">
+        <a href="index.html">PAZZO PRODUCTIONS</a>
+      </p>
 
       <nav aria-label="Main navigation">
-        <a href="about.html" class="nav-box">ABOUT</a>
-        <a href="video.html" class="nav-box">VIDEO</a>
-        <a href="still.html" class="nav-box" aria-current="page">STILL</a>
-        <a href="live.html" class="nav-box">LIVE</a>
-        <a href="other.html" class="nav-box">OTHER</a>
+        <a href="about.html" class="nav-button">ABOUT</a>
+        <a href="video.html" class="nav-button">VIDEO</a>
+        <a href="still.html" class="nav-button">STILL</a>
+        <a href="live.html" class="nav-button">LIVE</a>
+        <a href="other.html" class="nav-button">OTHER</a>
       </nav>
 
-      <p><a href="index.html">HOME</a></p>
+      <p class="home-link">
+        <a href="index.html">HOME</a>
+      </p>
 
       <hr>
     </header>
 
-    <main class="still-content">
-      <h2>PHOTOGRAPHY AND OTHER STILL MEDIUMS</h2>
+    <main>
+      <h1>STILL MEDIUMS</h1>
 
-      <!-- Add your photographs and other still work here. -->
+      <p>under construction...</p>
+
+      <nav class="extra-links" aria-label="Other pages">
+        <a href="allprojects.html">OTHER PROJECTS</a>
+        <a href="allcontacts.html">CONTACT</a>
+      </nav>
     </main>
 
     <footer>
       <hr>
 
-      <h3>Contact:</h3>
       <p>
         <a href="mailto:contact.pazzoprod@gmail.com">
           contact.pazzoprod@gmail.com
         </a>
+      </p>
+
+      <p>
+        FIND US ON INSTAGRAM ➜
+        <a href="https://www.instagram.com/pazzo_prod/">@pazzo_prod</a>
       </p>
     </footer>
 
