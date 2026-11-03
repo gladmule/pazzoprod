@@ -1,31 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>PAZZO PROD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ABOUT — PAZZO PROD</title>
+  <link rel="icon" href="favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Goblin+One&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 25px 20px;
+      text-align: center;
+      background: white;
+      color: black;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .site-title {
+      font-family: "Goblin One", serif;
+      font-weight: 400;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      line-height: 1.2;
+      margin: 0 0 15px;
+    }
+
+    .site-title a {
+      color: black;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .star {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 90px;
+      padding-bottom: 2px;
+      color: white;
+      text-decoration: none;
+      font-family: "Anton", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .star::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: black;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 94%,
+        50% 72%,
+        21% 94%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+    }
+
+    .star:hover::before,
+    .star:focus-visible::before,
+    .star[aria-current="page"]::before {
+      background: #b32025;
+    }
+
+    .star:focus-visible {
+      outline: 2px solid black;
+      outline-offset: 4px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid black;
+      margin: 20px 0;
+    }
+
+    a {
+      color: black;
+    }
+
+    main {
+      max-width: 750px;
+      margin: 35px auto 50px;
+    }
+
+    h1 {
+      font-family: "Goblin One", serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      line-height: 1.2;
+      margin: 0 0 30px;
+    }
+
+    .about-text {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: left;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
 
-  <h1>PAZZO PRODUCTIONS</h1>
+    <header>
+      <p class="site-title">
+        <a href="index.html">PAZZO PRODUCTIONS</a>
+      </p>
 
-<p>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
- <a href="listening.html">Listening</a>
- <a href="dates.html">Dates</a>
- <a href="ideas.html">Ideas</a>
-</p>
+      <nav aria-label="Main navigation">
+        <a href="about.html" class="star" aria-current="page">ABOUT</a>
+        <a href="video.html" class="star">VIDEO</a>
+        <a href="still.html" class="star">STILL</a>
+        <a href="live.html" class="star">LIVE</a>
+        <a href="other.html" class="star">OTHER</a>
+      </nav>
 
-<hr>
+      <hr>
+    </header>
 
-<h1> ABOUT </h1>
+    <main>
+      <h1>ABOUT</h1>
 
+      <p class="about-text">
+        PAZZO PRODUCTIONS is a company aimed to facilitate new,
+        experimental works with a focus on philosophical grindhouse
+        that uses genre and simple images to explore existential ideas.
+      </p>
+    </main>
 
-PAZZO PRODUCTIONS is a company aimed to facilitate new, experimental works with a focus on philosophical grind house that uses genre and simple images to explore existential ideas. 
+    <footer>
+      <hr>
 
+      <h3>Contact:</h3>
 
+      <p>
+        <a href="mailto:contact.pazzoprod@gmail.com">
+          contact.pazzoprod@gmail.com
+        </a>
+      </p>
 
+      <p>
+        FIND US ON INSTAGRAM ➜
+        <a href="https://www.instagram.com/pazzo_prod/">@pazzo_prod</a>
+      </p>
 
+      <h2>FOR THE MAD, BAD AND INTELLECTUAL.</h2>
+
+      <p>aka Intellectual Grindhouse</p>
+    </footer>
+
+  </div>
 </body>
 </html>
