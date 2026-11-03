@@ -1,39 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>PAZZO PROD</title>
-<link rel="icon" href="favicon.png">
+  <link rel="icon" href="favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+      background: white;
+      color: black;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    h1 {
+      font-family: "Ultra", serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 7vw, 6rem);
+      line-height: 1.1;
+      margin: 0 0 30px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .star {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      height: 140px;
+      color: white;
+      text-decoration: none;
+      font-family: Georgia, serif;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .star::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: black;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 94%,
+        50% 72%,
+        21% 94%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+    }
+
+    .star:hover::before,
+    .star:focus-visible::before {
+      background: #b32025;
+    }
+
+    .star:focus-visible {
+      outline: 2px solid black;
+      outline-offset: 4px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid black;
+      margin: 30px 0;
+    }
+
+    a {
+      color: black;
+    }
+  </style>
 </head>
+
 <body>
+  <main>
 
-  <h1>PAZZO PRODUCTIONS</h1>
+    <h1>PAZZO PRODUCTIONS</h1>
 
-<p>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
- <a href="listening.html">Listening</a>
- <a href="dates.html">Dates</a>
- <a href="ideas.html">Ideas</a>
-</p>
+    <nav aria-label="Creative work">
+      <a href="film.html" class="star">FILM</a>
+      <a href="video.html" class="star">VIDEO</a>
+      <a href="still.html" class="star">STILL</a>
+      <a href="live.html" class="star">LIVE</a>
+      <a href="other.html" class="star">OTHER</a>
+    </nav>
 
-<hr>
+    <hr>
+
+    <h3>Contact:</h3>
+    <p>
+      <a href="mailto:contact.pazzoprod@gmail.com">
+        contact.pazzoprod@gmail.com
+      </a>
+    </p>
 
 
-<h3>Contact:</h3>
-<p>
-  <a href="mailto:contact.pazzoprod@gmail.com">
-    contact.pazzoprod@gmail.com
-  </a>
-</p>
+    <h2>FOR THE MAD, BAD AND INTELLECTUAL.</h2>
 
-<h2>film, theatre, music, events</h2>
+    <p>aka Intellectual Grindhouse</p>
 
-<h2>FOR THE MAD BAD AND INTELLECTUAL</h2>
-
-Aka Intellectual grindhouse
+  </main>
 </body>
 </html>
-
-
